@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Wedding</title>
+  <!-- External CSS and fonts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap">
+  <style>
+    /* Custom autumn colors and code-inspired styling */
+    :root {
+      --primary-color: #A67F58; /* Soft Brown */
+      --secondary-color: #B08968; /* Muted Beige-Orange */
+      --background-light: #F8ECD5; /* Warm Beige */
+      --accent-color: #D4A373; /* Muted Copper */
+    }
+    body {
+      font-family: 'Fira Code', monospace;
+      background-color: var(--background-light);
+      color: #333;
+      background-image: url('background.png');
+      background-repeat: repeat;
+      background-size: 200px 200px;
+      font-size: 20px;
+    }
+    /* Navbar and menu colors */
+    .navbar {
+      background-color: var(--primary-color);
+    }
+
+    #navbarMenu {
+      background-color: var(--primary-color);
+    }
+
+
+    .navbar-item,
+    .navbar-burger span {
+      color: #FFF;
+    }
+    .navbar-burger.is-active span {
+      background-color: #FFF;
+    }
+    /* Section styles */
+    section {
+      padding: 40px 20px;
+    }
+    .section_container {
+      background: rgba(255,255,255,0.8);
+      padding: 20px;
+      border-radius: 10px;
+      position: relative;
+    }
+    /* Developer-inspired headings and text styling */
+    h1.title  {
+      font-weight: 500;
+      font-size: 2.5em;
+      color: var(--primary-color);
+    }
+    h2.subtitle {
+      font-weight: 500;
+      font-size: 1.8em;
+      color: var(--secondary-color);
+    }
+    p, ul {
+      line-height: 1.6;
+    }
+    /* Code-styled footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #1E1E1E;
+      color: #9CDCFE;
+      font-size: 0.9em;
+    }
+    /* Full-width images between sections */
+    .section-divider-image {
+      width: calc(100% - 80px);
+      height: auto;
+      display: block;
+      margin: 40px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION BAR -->
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="#overview"><strong>&lt;Neil &#38; Siân/&gt;</strong></a>
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu" onclick="toggleMenu()">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div id="navbarMenu" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item" href="#overview">Overview</a>
+        <a class="navbar-item" href="#plan">Plan for Weekend</a>
+        <a class="navbar-item" href="#venue">Venue</a>
+        <a class="navbar-item" href="#accommodation">Accommodation</a>
+        <a class="navbar-item" href="#food">Food</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Toggle Menu Script -->
+  <script>
+    function toggleMenu() {
+      const burger = document.querySelector('.navbar-burger');
+      const menu = document.getElementById('navbarMenu');
+      burger.classList.toggle('is-active');
+      menu.classList.toggle('is-active');
+    }
+  </script>
+
+  <!-- HERO SECTION -->
+  <section id="top">
+    <div class="container section_container">
+      <p style="font-size: 1.5em; font-weight: 400;">We're getting married</p>
+      <h1 class="title" style="font-size: 3em; margin-bottom: 0;">September 13, 2025</h1>
+      <p style="font-size: 1.5em; font-weight: 400;">Join us for a weekend of celebration</p>
+      <p style="font-size: 1.25em;">From Friday, September 12 to Sunday, September 14, 2025</p>
+    </div>
+  </section>
+  <img src="us4.jpg" alt="Image of us" class="section-divider-image">
+  <!-- OVERVIEW SECTION -->
+  <section id="overview">
+    <div class="container section_container">
+      <h1 class="title"> > Overview</h1>
+      <p>Welcome to our wedding website! Here you'll find all the information you need for the big weekend.</p>
+      <p>It started as a casual, hypothetical conversation: ‘What if we thought about guest numbers?’ or, ‘Maybe we should look at a few venues, just to see what’s out there.’ It wasn’t meant to be serious. But after visiting just one venue, things quickly took off. Now, what began as a simple discussion has turned into full-on wedding plans—and honestly, we couldn’t be more excited about how it’s all come together.</p>
+    </div>
+  </section>
+
+  <!-- Image Divider -->
+  <img src="us1.jpg" alt="Image of us" class="section-divider-image">
+
+  <!-- PLAN SECTION -->
+<section id="plan">
+    <div class="container section_container">
+      <h1 class="title"> > Plan for the Weekend</h1>
+      <p>Get ready for a weekend filled with festivities! Here’s the quick rundown:</p>
+      <ul>
+        <li><strong>Friday Night:</strong> BBQ for everyone.</li>
+        <li><strong>Saturday:</strong> Ceremony at 12:30 PM, followed by food, live music, and evening refreshments.</li>
+        <li><strong>Sunday:</strong> Breakfast for everyone, with pizza for those staying the night.</li>
+      </ul>
+      <br>
+      <h2 class="subtitle"> > Daily Details</h2>
+
+      <h3><strong>Friday Night</strong></h3>
+      <p>The festivities kick off with a relaxed BBQ for everyone to mingle, catch up, and settle in. Fire up your appetite—this is just the start of the weekend!</p>
+
+      <h3><strong>Saturday</strong></h3>
+      <p>The main event! The ceremony starts at 12:30 PM, followed by a feast and celebrations. We’ll have live music, so bring your dancing shoes, and there will be plenty of refreshments in the evening to keep the party going.</p>
+
+      <h3><strong>Sunday</strong></h3>
+      <p>We’ll start the day with breakfast for everyone to recharge. For those who want to stretch the weekend a bit further, pizza will be served in the evening for anyone staying the night. Feel free to relax and enjoy—there’s no rush to leave!</p>
+    </div>
+</section>
+
+  <!-- Image Divider -->
+  <img src="us2.jpg" alt="Image of us" class="section-divider-image">
+
+  <!-- VENUE SECTION -->
+<section id="venue">
+    <div class="container section_container">
+      <h1 class="title"> > Venue</h1>
+      <p>Our wedding will be held at the beautiful <a href="https://northsidefarm.co.uk/" target="_blank">Northside Farm</a> in Horsley. It’s the perfect setting for our celebration, and there’s free and ample parking available for everyone.</p>
+      <p><strong>Address:</strong> Northside Farm, Horsley NE15 0LZ</p>
+      <p><a href="https://www.google.com/maps/dir//Northside+Farm,+Horsley+NE15+0LZ" target="_blank">Get Directions on Google Maps</a></p>
+    </div>
+</section>
+
+  <!-- Image Divider -->
+  <img src="us3.jpg" alt="Image of us" class="section-divider-image">
+
+  <!-- ACCOMMODATION SECTION -->
+<section id="accommodation">
+    <div class="container section_container">
+      <h1 class="title"> > Accommodation</h1>
+      <p>We’ve got a few options to make your stay as comfortable (or adventurous!) as you’d like.</p>
+      <p>You can camp onsite or find nearby accommodation on your own. For onsite options, you can go for:</p>
+      <ul>
+        <li><strong>Glamping Pods:</strong> £200 for the weekend.<a href="glamping.html">More Info</a> </li>
+        <li><strong>Bell Tents:</strong> £200 for the weekend.<a href="tents.html">More Info</a> </li>
+        <li><strong>Bring Your Own Tent, Campervan, or Caravan:</strong> Free!</li>
+      </ul>
+      <p>There are showers and toilets available onsite, so you’ll have some comforts while you’re here. And best of all, you don’t have to leave until Monday!</p>
+    </div>
+</section>
+
+  <!-- Image Divider -->
+  <img src="us5.jpg" alt="Image of us" class="section-divider-image">
+
+  <!-- FOOTER SECTION -->
+  <footer>
+    <p>&copy; 2024 &lt;Neil &#38; Siân/&gt; - Console logs of love and code.</p>
+  </footer>
+
+</body>
+</html>
