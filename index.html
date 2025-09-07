@@ -1,116 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Wedding</title>
-  <!-- External CSS and fonts -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sian & Neil – Wedding Info</title>
+  <!-- Bulma + font -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap" />
   <style>
-    /* Custom autumn colors and code-inspired styling */
     :root {
-      --primary-color: #A67F58; /* Soft Brown */
-      --secondary-color: #B08968; /* Muted Beige-Orange */
-      --background-light: #F8ECD5; /* Warm Beige */
-      --accent-color: #D4A373; /* Muted Copper */
+      --primary-color: #A67F58;
+      --secondary-color: #B08968;
+      --background-light: #F8ECD5;
+      --accent-color: #D4A373;
     }
+    html, body { background-color: var(--background-light); }
     body {
       font-family: 'Fira Code', monospace;
-      background-color: var(--background-light);
       color: #333;
-      background-image: url('background.png');
-      background-repeat: repeat;
-      background-size: 200px 200px;
-      font-size: 20px;
+      font-size: 18px;
     }
-    /* Navbar and menu colors */
-    .navbar {
-      background-color: var(--primary-color);
-    }
-
-    #navbarMenu {
-      background-color: var(--primary-color);
-    }
-
-
-    .navbar-item,
-    .navbar-burger span {
-      color: #FFF;
-    }
-    .navbar-burger.is-active span {
-      background-color: #FFF;
-    }
-    /* Section styles */
-    section {
-      padding: 40px 20px;
-    }
+    .navbar { background: var(--primary-color); }
+    .navbar-item, .navbar-burger span { color: #fff; }
     .section_container {
-      background: rgba(255,255,255,0.8);
-      padding: 20px;
-      border-radius: 10px;
-      position: relative;
+      background: rgba(255,255,255,0.9);
+      padding: 24px;
+      border-radius: 12px;
     }
-    /* Developer-inspired headings and text styling */
-    h1.title  {
-      font-weight: 500;
-      font-size: 2em;
-      color: var(--primary-color);
-    }
-    h2.subtitle {
-      font-weight: 500;
-      font-size: 1.3em;
-      color: var(--secondary-color);
-    }
-    p, ul {
-      line-height: 1.6;
-    }
-    /* Code-styled footer */
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #1E1E1E;
-      color: #9CDCFE;
-      font-size: 0.9em;
-    }
-    /* Full-width images between sections */
-    .section-divider-image {
-      max-width: 800px;
-      width: 100%;
-      height: auto;
-      display: block;
-      margin: 40px auto;
-      border-radius: 10px;
-    }
-
-     #topButton {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 100;
-      display: none;
-      background-color: #007BFF;
-      color: white;
-      border: none;
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
-      font-size: 20px;
-      cursor: pointer;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    #topButton:hover {
-      background-color: #0056b3;
-    }
+    h1.title { color: var(--primary-color); font-weight: 600; }
+    h2.subtitle { color: var(--secondary-color); font-weight: 600; }
+    .keyline { border-top: 2px dashed var(--accent-color); margin: 24px 0; }
+    .info-tag { background: var(--accent-color); color: #fff; border-radius: 6px; padding: 2px 8px; font-size: .9em; }
+    .mt-2 { margin-top: .5rem; }
   </style>
 </head>
 <body>
-
-  <!-- NAVIGATION BAR -->
+  <!-- NAV -->
   <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-      <a class="navbar-item" href="#overview"><strong>&lt;Neil &#38; Siân/&gt;</strong></a>
+      <a class="navbar-item" href="#top"><strong>&lt;Neil &amp; Siân/&gt;</strong></a>
       <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu" onclick="toggleMenu()">
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
@@ -119,16 +47,16 @@
     </div>
     <div id="navbarMenu" class="navbar-menu">
       <div class="navbar-start">
-        <a class="navbar-item" href="#overview">Overview</a>
-        <a class="navbar-item" href="#plan">Plan for Weekend</a>
-        <a class="navbar-item" href="#venue">Venue</a>
-        <a class="navbar-item" href="#accommodation">Accommodation</a>
-        <a class="navbar-item" href="#food">Food</a>
+        <a class="navbar-item" href="#essentials">Essentials</a>
+        <a class="navbar-item" href="#schedule">Schedule</a>
+        <a class="navbar-item" href="#venue">Venue & Travel</a>
+        <a class="navbar-item" href="#food">Food & Drink</a>
+        <a class="navbar-item" href="#notes">Notes</a>
+        <a class="navbar-item" href="faq.html">FAQ</a>
       </div>
     </div>
   </nav>
 
-  <!-- Toggle Menu Script -->
   <script>
     function toggleMenu() {
       const burger = document.querySelector('.navbar-burger');
@@ -138,128 +66,104 @@
     }
   </script>
 
-  <!-- HERO SECTION -->
+  <!-- HERO / ESSENTIALS -->
   <section id="top">
-    <div class="container section_container">
-      <p style="font-size: 1.5em; font-weight: 400;">We're getting married</p>
-      <h1 class="title" style="font-size: 2em; margin-bottom: 0;">September 13, 2025</h1>
-      <p style="font-size: 1.5em; font-weight: 400;">Join us for a weekend of celebration</p>
-      <p style="font-size: 1.25em;">From Friday, September 12 to Sunday, September 14, 2025</p>
-    </div>
-  </section>
-  <img src="us4.jpg" alt="Image of us" class="section-divider-image">
-  <!-- OVERVIEW SECTION -->
-  <section id="overview">
-    <div class="container section_container">
-      <h1 class="title"> > Overview</h1>
-      <p>Welcome to our wedding website! Here you'll find all the information you need for the big weekend.</p>
-      <p>It started as a casual, hypothetical conversation: ‘What if we thought about guest numbers?’ or, ‘Maybe we should look at a few venues, just to see what’s out there.’ It wasn’t meant to be serious. But after visiting just one venue, things quickly took off. Now, what began as a simple discussion has turned into full-on wedding plans—and honestly, we couldn’t be more excited about how it’s all come together.</p>
+    <div class="container section_container" id="essentials">
+      <h1 class="title">Sian & Neil — Wedding Information</h1>
+      <p class="mt-2"><span class="info-tag">Date</span> Saturday 13 September 2025</p>
+      <p class="mt-2"><span class="info-tag">Arrive</span> from <strong>11:30am</strong> &nbsp;|&nbsp; <span class="info-tag">Ceremony</span> <strong>12:30pm</strong></p>
+      <p class="mt-2"><span class="info-tag">Finish</span> Midnight (no pressure to stay that long)</p>
+      <p class="mt-2">For other questions, please check our <a href="faq.html">FAQ page</a>.</p>
     </div>
   </section>
 
-  <!-- Image Divider -->
-  <img src="us1.jpg" alt="Image of us" class="section-divider-image">
-
-  <!-- PLAN SECTION -->
-<section id="plan">
+  <!-- SCHEDULE -->
+  <section id="schedule">
     <div class="container section_container">
-      <h1 class="title"> > Plan for the Weekend</h1>
-      <p>Get ready for a weekend filled with festivities! Here’s the quick rundown:</p>
+      <h1 class="title">Schedule</h1>
+
+      <h2 class="subtitle">Friday 12 September — Optional BBQ (for those who RSVP’d)</h2>
       <ul>
-        <li><strong>Friday Night:</strong> BBQ for everyone.</li>
-        <li><strong>Saturday:</strong> Ceremony at 12:30 PM, followed by food, live music, and evening refreshments.</li>
-        <li><strong>Sunday:</strong> Breakfast for everyone, with pizza for those staying the night.</li>
+        <li>From <strong>midday</strong>: arrivals welcome</li>
+        <li><strong>Bar open</strong></li>
+        <li><strong>6:00pm</strong>: BBQ in the courtyard</li>
+        <li>If you’ll arrive after 6:00pm, let us know and we’ll try to save food</li>
       </ul>
-      <br>
-      <h2 class="subtitle"> > Daily Details</h2>
 
-      <h3><strong>Friday Night</strong></h3>
-      <p>The festivities kick off with a relaxed BBQ for everyone to mingle, catch up, and settle in. Fire up your appetite—this is just the start of the weekend!</p>
+      <div class="keyline"></div>
 
-      <h3><strong>Saturday</strong></h3>
-      <p>The main event! The ceremony starts at 12:30 PM, followed by a feast and celebrations. We’ll have live music, so bring your dancing shoes, and there will be plenty of refreshments in the evening to keep the party going.</p>
-
-      <h3><strong>Sunday</strong></h3>
-      <p>We’ll start the day with breakfast for everyone to recharge. For those who want to stretch the weekend a bit further, pizza will be served in the evening for anyone staying the night. Feel free to relax and enjoy—there’s no rush to leave!</p>
-    </div>
-</section>
-
-  <!-- Image Divider -->
-  <img src="us2.jpg" alt="Image of us" class="section-divider-image">
-
-  <!-- VENUE SECTION -->
-<section id="venue">
-    <div class="container section_container">
-      <h1 class="title"> > Venue</h1>
-      <p>Our wedding will be held at the beautiful <a href="https://northsidefarm.co.uk/" target="_blank">Northside Farm</a> in Horsley. It’s the perfect setting for our celebration, and there’s free and ample parking available for everyone.</p>
-      <p><strong>Address:</strong> Northside Farm, Horsley NE15 0LZ</p>
-      <p><a href="https://www.google.com/maps/dir//Northside+Farm,+Horsley+NE15+0LZ" target="_blank">Get Directions on Google Maps</a></p>
-    </div>
-</section>
-
-  <!-- Image Divider -->
-  <img src="us3.jpg" alt="Image of us" class="section-divider-image">
-
-  <!-- ACCOMMODATION SECTION -->
-<section id="accommodation">
-    <div class="container section_container">
-      <h1 class="title">Accommodation</h1>
-      <p>We’ve got a range of options to make your stay as enjoyable as possible, whether you’re looking for maximum comfort or a bit of adventure.</p>
-      <p><b>The best choice for your stay:</b> Our **Glamping Pods**! These are onsite, fully heated, and available for everyone to book. With limited availability (only 10 pods, first come, first served), they’re the perfect cozy retreat for the weekend. </p>
-      <p>If the pods fill up, don’t worry—we’ve got backup options, including Bell Tents or the flexibility to bring your own setup:</p>
+      <h2 class="subtitle">Saturday 13 September — The Day</h2>
       <ul>
-        <li><strong>Glamping Pods (10 available, First Come, First Served):</strong> £200 for the weekend. <a href="glamping.html">More Info</a></li>
-        <li><strong>Bell Tents (for when pods are booked):</strong> £200 for the weekend. <a href="tents.html">More Info</a></li>
-        <li><strong>Bring Your Own Tent, Campervan, or Caravan:</strong> Free!</li>
+        <li><strong>Morning (on-site)</strong>: simple breakfast bits (cereal, bread, milk, tea/coffee)</li>
+        <li><strong>11:30am</strong>: please arrive and get settled</li>
+        <li><strong>12:30pm</strong>: legal ceremony (please no shout-outs)</li>
+        <li><strong>1:00–2:30pm</strong>: drinks, confetti & cake</li>
+        <li><strong>2:30–4:15pm</strong>: afternoon tea</li>
+        <li><strong>7:00pm</strong>: first dance — <em>please join in almost immediately</em></li>
+        <li><strong>7:00–8:00pm</strong>: band (first set)</li>
+        <li><strong>8:00pm</strong>: evening food</li>
+        <li><strong>9:00–10:00pm</strong>: band (second set)</li>
+        <li><strong>10:00pm–midnight</strong>: Spotify playlist of bangers</li>
+        <li><strong>11:30pm</strong>: nightcap</li>
       </ul>
-      <p><b>Please book your Glamping Pod as soon as possible to guarantee availability!</b></p>
-      <p>All options include access to onsite showers and toilets, so you can enjoy some home comforts while you’re here. And the best part? You don’t have to leave until Monday!</p>
+
+      <div class="keyline"></div>
+
+      <h2 class="subtitle">Sunday 14 September</h2>
+      <ul>
+        <li><strong>10:00am</strong>: breakfast buffet for overnight guests</li>
+      </ul>
+
+      <h2 class="subtitle">Monday 15 September</h2>
+      <ul>
+        <li>Site closes at <strong>midday</strong></li>
+      </ul>
     </div>
-</section>
+  </section>
 
-  <img src="us6.jpg" alt="Image of us" class="section-divider-image">
+  <!-- VENUE & TRAVEL -->
+  <section id="venue">
+    <div class="container section_container">
+      <h1 class="title">Venue & Travel</h1>
+      <p><strong>Northside Farm</strong>, Horsley, NE15 0LZ</p>
+      <p><a href="https://www.google.com/maps/dir//Northside+Farm,+Horsley+NE15+0LZ" target="_blank" rel="noopener">Open in Google Maps</a></p>
+      <ul>
+        <li><strong>Parking:</strong> on site, free</li>
+        <li><strong>Taxis (book in advance):</strong> LA Taxis 0191&nbsp;287&nbsp;7777; Dean’s Taxi 0191&nbsp;444&nbsp;4444</li>
+      </ul>
+    </div>
+  </section>
 
-  
+  <!-- FOOD & DRINK NOTES -->
   <section id="food">
-  <div class="container section_container">
-    <h1 class="title"> > Food</h1>
-    <p>Here’s what we’ve got lined up for food over the weekend:</p>
-    <ul>
-      <li><strong>Friday Night BBQ:</strong> £15 per person for a proper BBQ to kick things off.</li>
-      <li><strong>Saturday Morning Breakfast:</strong> We’ll have bread, milk, cereal, and tea/coffee. Bring along anything extra if you fancy more options.</li>
-      <li><strong>Wedding "Breakfast" (Saturday):</strong> A meal straight after the ceremony.</li>
-      <li><strong>Evening Food (Saturday):</strong> We’ll sort the food to keep you going through the night.</li>
-      <li><strong>Sunday Evening Pizzas:</strong> £5 per pizza for anyone staying around.</li>
-    </ul>
-  </div>
-</section>
+    <div class="container section_container">
+      <h1 class="title">Food & Drink</h1>
+      <ul>
+        <li>All dietary requirements have been passed to the venue</li>
+        <li>Drinks tokens will be explained on the day</li>
+      </ul>
+    </div>
+  </section>
 
-  <button id="topButton" title="Go to top">↑</button>
+  <!-- NOTES -->
+  <section id="notes">
+    <div class="container section_container">
+      <h1 class="title">Notes</h1>
+      <ul>
+        <li>Forecast suggests drizzle — bring an umbrella and grass-friendly shoes</li>
+        <li>Our dog will be around on Friday and most of Saturday; he’s been known to steal BBQ burgers, but he’ll be on a lead</li>
+        <li>No gifts — just bring yourselves</li>
+        <li>No wedding hashtag — just tag us in photos</li>
+        <li>No pressure to stay until midnight — we’re 9pm bedtime people; zero judgement for early exits</li>
+      </ul>
+      <p>For more details, please see our <a href="faq.html">FAQ page</a>.</p>
+    </div>
+  </section>
 
-  <!-- Image Divider -->
-  <img src="us5.jpg" alt="Image of us" class="section-divider-image">
-
-  <!-- FOOTER SECTION -->
-  <footer>
-    <p>&copy; 2024 &lt;Neil &#38; Siân/&gt; - Console logs of love and code.</p>
+  <footer class="footer" style="background:#1E1E1E;color:#9CDCFE">
+    <div class="content has-text-centered">
+      <p>&copy; 2025 &lt;Neil &amp; Siân/&gt;</p>
+    </div>
   </footer>
-<script>    const topButton = document.getElementById('topButton');
-
-    // Show the button when scrolling down
-    window.onscroll = function () {
-      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        topButton.style.display = 'block';
-      } else {
-        topButton.style.display = 'none';
-      }
-    };
-
-    // Scroll to the top when the button is clicked
-    topButton.onclick = function () {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    };</script>
 </body>
 </html>
